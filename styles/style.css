@@ -1,0 +1,129 @@
+
+:root {
+  --bg1: #0b1220;
+  --bg2: #050814;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #e8eefc;
+  --muted: rgba(232, 238, 252, 0.75);
+  --accent: #6aa6ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 10% 10%, #14224a 0%, transparent 60%),
+              radial-gradient(1000px 500px at 90% 20%, #1f3b66 0%, transparent 55%),
+              linear-gradient(180deg, var(--bg1), var(--bg2));
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 22px;
+}
+
+.topbar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.2px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+a { color: var(--text); text-decoration: none; }
+
+.link {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.12);
+  transition: transform 0.06s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.link:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  background: rgba(106, 166, 255, 0.10);
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+p { margin: 8px 0; color: var(--muted); }
+
+strong { color: var(--text); }
+
+ul { margin: 8px 0 0 18px; color: var(--muted); }
+
+code {
+  padding: 2px 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.20);
+  color: var(--text);
+}
+
+.media {
+  margin-top: 10px;
+}
+
+.cover {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--muted);
+}
